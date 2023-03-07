@@ -3,7 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebPack Template</title>
+    <title>Leaderboard</title>
   </head>
-  <body></body>
+  <body>
+    <header><h1 class="text-4xl font-bold px-8 py-4">Leaderboard</h1></header>
+    <main
+      class="flex flex-col md:flex-row items-start justify-evenly p-4 w-full"
+    >
+      <section class="w-full md:w-1/3 my-4">
+        <div class="flex justify-between items-center p-2">
+          <h2 class="lg:text-3xl text-2xl">Recent scores</h2>
+          <button
+            id="refresh"
+            class="border-2 shadow-md shadow-slate-700 border-slate-700 px-2 text-xl"
+          >
+            Refresh
+          </button>
+        </div>
+        <ul
+          id="list"
+          class="border-2 border-slate-800 p-4 rounded-md w-full"
+        ></ul>
+      </section>
+      <section
+        class="w-full md:w-1/3 my-4 flex flex-col items-center md:items-start space-y-4"
+      >
+        <h2 class="lg:text-3xl text-2xl">Add your score</h2>
+        <form id="addForm" class="flex flex-col items-start space-y-4 w-fit">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="w-60 sm:w-80 text-xl px-4 py-2 border-2 border-slate-700"
+            required
+            placeholder="Your name"
+          />
+          <input
+            type="number"
+            min="0"
+            max="100"
+            name="score"
+            id="score"
+            class="w-60 sm:w-80 text-xl px-4 py-2 border-2 border-slate-700"
+            required
+            placeholder="Your score"
+          />
+          <input
+            type="submit"
+            value="Submit"
+            class="self-end border-2 shadow-md shadow-slate-700 border-slate-700 px-2 text-xl"
+          />
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
