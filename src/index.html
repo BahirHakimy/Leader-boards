@@ -14,30 +14,28 @@
         <div class="flex justify-between items-center p-2">
           <h2 class="lg:text-3xl text-2xl">Recent scores</h2>
           <button
+            id="refresh"
             class="border-2 shadow-md shadow-slate-700 border-slate-700 px-2 text-xl"
           >
             Refresh
           </button>
         </div>
-        <ul class="border-2 border-slate-800 p-4 rounded-md w-full">
-          <li class="text-xl py-2 px-4">Name : 100</li>
-          <li class="text-xl py-2 px-4 bg-slate-200">Name : 30</li>
-          <li class="text-xl py-2 px-4">Name : 35</li>
-          <li class="text-xl py-2 px-4 bg-slate-200">Name : 53</li>
-          <li class="text-xl py-2 px-4">Name : 44</li>
-          <li class="text-xl py-2 px-4 bg-slate-200">Name : 32</li>
-        </ul>
+        <ul
+          id="list"
+          class="border-2 border-slate-800 p-4 rounded-md w-full"
+        ></ul>
       </section>
       <section
         class="w-full md:w-1/3 my-4 flex flex-col items-center md:items-start space-y-4"
       >
         <h2 class="lg:text-3xl text-2xl">Add your score</h2>
-        <form class="flex flex-col items-start space-y-4 w-fit">
+        <form id="addForm" class="flex flex-col items-start space-y-4 w-fit">
           <input
             type="text"
             name="name"
             id="name"
             class="w-60 sm:w-80 text-xl px-4 py-2 border-2 border-slate-700"
+            required
             placeholder="Your name"
           />
           <input
@@ -47,6 +45,7 @@
             name="score"
             id="score"
             class="w-60 sm:w-80 text-xl px-4 py-2 border-2 border-slate-700"
+            required
             placeholder="Your score"
           />
           <input
