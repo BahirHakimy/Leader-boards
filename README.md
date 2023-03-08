@@ -67,7 +67,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Demo](https://bahirhakimy.github.io/Leader-boards/)
+- Not Ready Yet **Will be added soon**
+<!-- - [Demo](https://bahirhakimy.github.io/Leader-boards/) -->
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
@@ -135,9 +136,7 @@ npm run build
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Adding scores to server**
-- **Retrieve scores from server**
-
+- **Cool Design On The Way** :eyes:
 <p align="right"><a href="#readme-top">👆</a></p>
 
 <!-- Contributing -->

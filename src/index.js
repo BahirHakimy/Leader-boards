@@ -10,7 +10,7 @@ const showMessage = (message) => {
   }, 5000);
 };
 
-async function init() {
+const init = async () => {
   const form = $('#addForm');
   const refresh = $('#refresh');
   const leaderbord = new Leaderboard($('#list'), showMessage);
@@ -27,7 +27,7 @@ async function init() {
   });
   await leaderbord.getScores();
   leaderbord.render();
-}
+};
 
 window.onload = () => {
   init();
