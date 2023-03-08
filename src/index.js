@@ -5,7 +5,9 @@ import { $ } from './modules/utils.js';
 const showMessage = (message) => {
   const label = $('#message');
   label.textContent = message;
-  setTimeout(() => (label.textContent = ''), 5000);
+  setTimeout(() => {
+    label.textContent = '';
+  }, 5000);
 };
 
 async function init() {

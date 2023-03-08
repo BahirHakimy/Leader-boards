@@ -33,8 +33,7 @@ export default class Leaderboard {
   render() {
     this.list.innerHTML = this.scores
       .map(
-        ({ user, score }) =>
-          `<li class="text-xl even:bg-slate-300 py-2 px-4">${user} : ${score}</li>`
+        ({ user, score }) => `<li class="text-xl even:bg-slate-300 py-2 px-4">${user} : ${score}</li>`,
       )
       .join('');
   }
