@@ -23,5 +23,5 @@
     ],
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
-  "ignorePatterns": ["dist/", "build/"]
+  "ignorePatterns": ["dist/", "build/", "src/"]
 }
