@@ -24,7 +24,7 @@
 
 # 📖 Leader Boards <a name="about-project"></a>
 
-**Leader Boards** A simple app that uses fetch **API** and it store's the scores for every user.
+**Leader Boards** A simple app built with `Webpack` `HTML` `CSS` `Javascript` that uses fetch **API** to interact with an external server, it fetchs the data from the server, adds new data new data and displays the result.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -36,6 +36,7 @@
    <li>HTML</li>
    <li>CSS</li>
    <li>Javascript</li>
+   <li>Tailwind Css</li>
   </ul>
 </details>
 
