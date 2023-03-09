@@ -24,7 +24,7 @@ module.exports = {
         },
         slide: {
           from: {
-            width: 100,
+            width: '100%',
           },
           to: {
             width: 0,
