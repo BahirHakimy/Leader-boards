@@ -7,6 +7,13 @@ import first from '../assets/M1.png';
 import second from '../assets/M2.png';
 import third from '../assets/M3.png';
 
+const getBadge = (index) => {
+  const icons = [first, second, third];
+  return index <= 2
+    ? `<img width="32" class="absolute -translate-x-full " src=${icons[index]} alt='badge' />`
+    : '';
+};
+
 export default class Leaderboard {
   constructor(list = $('#list'), callback) {
     this.list = list;
@@ -45,26 +52,18 @@ export default class Leaderboard {
     }
   }
 
-  getBadge(index) {
-    const icons = [first, second, third];
-    return  (index <= 2)? 
-      `<img width="32" class="absolute -translate-x-full " src=${icons[index]} alt='badge' />`: "";
-    
-  }
-
   render() {
-    this.list.innerHTML =
-      this.scores?.length > 0
-        ? this.scores
-            .map(
-              ({ user, score }, i) =>
-                `<li class="relative text-xl hover:bg-[#a413] rounded-md select-none cursor-pointer py-2 px-4 flex justify-between"> 
-                ${this.getBadge(
-                  i
-                )}
-                <p>${user}</p> <span>${score}</span></li>`
-            )
-            .join('')
-        : `<li class="text-xl hover:bg-[#a413] rounded-md select-none text-center"><p>No Record</p></li>`;
+    this.list.innerHTML = this.scores?.length > 0
+      ? this.scores
+        .map(
+          (
+            { user, score },
+            i,
+          ) => `<li class="relative text-xl hover:bg-[#a413] rounded-md select-none cursor-pointer py-2 px-4 flex justify-between"> 
+                ${getBadge(i)}
+                <p>${user}</p> <span>${score}</span></li>`,
+        )
+        .join('')
+      : '<li class="text-xl hover:bg-[#a413] rounded-md select-none text-center"><p>No Record</p></li>';
   }
 }

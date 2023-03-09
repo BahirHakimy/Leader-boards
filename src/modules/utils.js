@@ -1,12 +1,9 @@
-const sortObjectArray = (array, sortProperty = 'index', order = 'asc') =>
-  array.reduce((prev, curr) => {
-    prev.push(curr);
-    return prev.sort((item1, item2) =>
-      order === 'asc'
-        ? item1[sortProperty] - item2[sortProperty]
-        : item2[sortProperty] - item1[sortProperty]
-    );
-  }, []);
+const sortObjectArray = (array, sortProperty = 'index', order = 'asc') => array.reduce((prev, curr) => {
+  prev.push(curr);
+  return prev.sort((item1, item2) => (order === 'asc'
+    ? item1[sortProperty] - item2[sortProperty]
+    : item2[sortProperty] - item1[sortProperty]));
+}, []);
 
 const createElement = (tagName = 'div', options = {}) => {
   const element = document.createElement(tagName);
@@ -29,7 +26,7 @@ const showToast = (
   msg,
   callback,
   buttonText = 'OK',
-  anchor = $('#toastContainer')
+  anchor = $('#toastContainer'),
 ) => {
   const toast = createElement('li', {
     class:
@@ -62,4 +59,6 @@ const showToast = (
   };
 };
 
-export { sortObjectArray, createElement, $, showToast };
+export {
+  sortObjectArray, createElement, $, showToast,
+};
