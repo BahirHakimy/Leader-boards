@@ -1,8 +1,18 @@
-import { $, sortObjectArray } from './utils.js';
+import { $, sortObjectArray, showToast } from './utils.js';
 import game from './game.json';
 import getScores from './getScores.js';
 import addScore from './addScore.js';
 import createGame from './createGame.js';
+import first from '../assets/M1.png';
+import second from '../assets/M2.png';
+import third from '../assets/M3.png';
+
+const getBadge = (index) => {
+  const icons = [first, second, third];
+  return index <= 2
+    ? `<img width="32" class="absolute -translate-x-full " src=${icons[index]} alt='badge' />`
+    : '';
+};
 
 export default class Leaderboard {
   constructor(list = $('#list'), callback) {
@@ -11,14 +21,22 @@ export default class Leaderboard {
   }
 
   async getScores() {
-    const scores = await getScores(game.ID);
-    this.scores = sortObjectArray(scores, 'score', 'dec');
-    this.render();
+    try {
+      const scores = await getScores(game.ID);
+      this.scores = sortObjectArray(scores, 'score', 'dec');
+      this.render();
+    } catch (error) {
+      showToast(error?.message);
+    }
   }
 
   async addScore(user) {
-    const result = await addScore(game.ID, user);
-    this.callback?.(result);
+    try {
+      const result = await addScore(game.ID, user);
+      this.callback?.(result);
+    } catch (error) {
+      showToast(error?.message);
+    }
   }
 
   async refresh() {
@@ -26,15 +44,26 @@ export default class Leaderboard {
   }
 
   async createGame(name) {
-    const ID = await createGame(name);
-    this.callback?.(ID);
+    try {
+      const ID = await createGame(name);
+      this.callback?.(ID);
+    } catch (error) {
+      showToast(error?.message);
+    }
   }
 
   render() {
-    this.list.innerHTML = this.scores
-      .map(
-        ({ user, score }) => `<li class="text-xl even:bg-slate-300 py-2 px-4">${user} : ${score}</li>`,
-      )
-      .join('');
+    this.list.innerHTML = this.scores?.length > 0
+      ? this.scores
+        .map(
+          (
+            { user, score },
+            i,
+          ) => `<li class="relative text-xl hover:bg-[#a413] rounded-md select-none cursor-pointer py-2 px-4 flex justify-between"> 
+                ${getBadge(i)}
+                <p>${user}</p> <span>${score}</span></li>`,
+        )
+        .join('')
+      : '<li class="text-xl hover:bg-[#a413] rounded-md select-none text-center"><p>No Record</p></li>';
   }
 }
