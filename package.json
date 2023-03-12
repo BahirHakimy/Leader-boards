@@ -38,6 +38,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
     "postcss-preset-env": "^8.0.1"
