@@ -22,9 +22,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 WebPack Template <a name="about-project"></a>
+# 📖 Leader Boards <a name="about-project"></a>
 
-**WebPack Template** A pre built template to quickly setup a Webpack based project.
+**Leader Boards** A simple app built with `Webpack` `HTML` `CSS` `Javascript` that uses fetch **API** to interact with an external server, it fetchs the data from the server, adds new data new data and displays the result.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -36,6 +36,7 @@
    <li>HTML</li>
    <li>CSS</li>
    <li>Javascript</li>
+   <li>Tailwind Css</li>
   </ul>
 </details>
 
@@ -58,8 +59,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Pre built**
-- **Clone and go**
+- **Clean Design**
+- **Responsive**
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
@@ -67,7 +68,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- [Demo](https://bahirhakimy.github.io/Leader-boards/)
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
@@ -90,10 +91,11 @@ In order to run this project you need to:
 Clone the repo into your local machine:
 
 ```bash
-git clone https://github.com/BahirHakimy/WebPack-template.git
+git clone https://github.com/BahirHakimy/Leader-boards.git
 ```
 
 Install the dependencies using npm:
+
 ```bash
 npm install
 ```
@@ -101,17 +103,20 @@ npm install
 ### Usage
 
 To start the development server run
+
 ```bash
 npm start
 ```
+
 - this command will start the development server on `localhost:8080` address
 
 To create and optimized production build run
+
 ```bash
 npm run build
 ```
-- this command will create a bunduled chunks of code inside `dist/` folder
 
+- this command will create a bunduled chunks of code inside `dist/` folder
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
@@ -131,8 +136,7 @@ npm run build
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **N/A**
-
+- **Cool Design On The Way** :eyes:
 <p align="right"><a href="#readme-top">👆</a></p>
 
 <!-- Contributing -->

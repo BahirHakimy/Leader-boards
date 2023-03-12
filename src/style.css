@@ -1,3 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2223;
+  border-radius: 0.5rem;
+}
+
 body {
-  background-color: bisque;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url('./assets/waveTop.svg'), url('./assets/waveBottom.svg');
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+}
+
+.toast {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: transparent;
+  animation: pop 0.5s linear 1 forwards;
+  transform: translateX(100%);
+}
+
+.message {
+  font-weight: bold;
+}
+
+.action {
+  background-color: cyan;
+  border: none;
+  padding: 0.2rem 1rem;
+  box-shadow: none;
+}
+
+.slider {
+  position: absolute;
+  background-color: blue;
+  height: 0.5rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  animation: slide 3s linear 1 forwards;
 }
