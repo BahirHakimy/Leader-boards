@@ -68,8 +68,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Not Ready Yet **Will be added soon**
-<!-- - [Demo](https://bahirhakimy.github.io/Leader-boards/) -->
+- [Demo](https://bahirhakimy.github.io/Leader-boards/)
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
